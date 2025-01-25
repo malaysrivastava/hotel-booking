@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private apiUrl = 'http://localhost:7001/api'; // Base URL for proxy
+  private apiUrl = 'https://hotel-booking-kappa-three.vercel.app/api'; // Base URL for proxy
 
   constructor(private http: HttpClient) {}
 

@@ -31,7 +31,7 @@ class App{
         this.app.use(
             cors({
                 credentials:true,
-                origin:['https://booking-system-malay.netlify.app','http://localhost:4200'],
+                origin:['https://hotel-booking-unstop.netlify.app','http://localhost:4200'],
             })
         );
         this.app.use(bodyParser.json());
