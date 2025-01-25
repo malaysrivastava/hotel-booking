@@ -1,0 +1,52 @@
+<!-- GitHub Button -->
+<div class="github-button">
+  <a href="https://github.com/malaysrivastava/booking-system" target="_blank" aria-label="GitHub">
+    <img width="60" height="60" src="https://img.icons8.com/color/48/github--v1.png" alt="GitHub icon"/>
+    <span class="github-text">Click to get code</span>
+  </a>
+</div>
+
+<div class="container">
+  <div class="left-side">
+    <!-- Content for the left side -->
+  </div>
+
+  <div class="main-content">
+    <!-- Buttons and Input Field -->
+    <div class="overlay" *ngIf="isBooking">
+      <div class="loader"></div>
+    </div> 
+    <div class="controls">
+      <button class="btn" (click)="resetRooms()" [disabled]="isBooking">Reset</button>
+      <button class="btn" (click)="randomBook()" [disabled]="isBooking">Random</button>
+      <form (submit)="onBookRooms(); $event.preventDefault()">
+        <input type="number" placeholder="Enter number of rooms" max="5" class="input-field" (input)="onRoomsChange($event)" required="true" />
+        <button type="submit" class="btn" [disabled]="isBooking">
+          {{ isBooking ? 'Booking...' : 'Book' }}
+        </button>
+        <span class="response-message">{{ responseMessage }}</span>
+      </form>
+    </div>
+
+    <!-- Iterate through each floor -->
+    <div class="grid">
+      <div *ngFor="let floor of floors" class="floor-container">
+        <div class="floor-layout">
+          <!-- Rooms for the floor -->
+          <div class="room-grid">
+            <div *ngFor="let room of floor.rooms" 
+                 class="room-box" 
+                 [style.background-color]="getNumberColor(room.status)">
+              {{ room.roomNumber }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+  Made with <span class="heart">&lt;3</span> by Malay
+</footer>

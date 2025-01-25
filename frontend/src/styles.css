@@ -1,0 +1,32 @@
+body {
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Define a font for the entire website */
+    background: linear-gradient(135deg, #e0f7fa, #80deea); /* Light blue gradient */
+    color: #333; /* Dark text color for contrast */
+    min-height: 100vh; /* Ensures the body covers the entire viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background: linear-gradient(135deg, #80deea, #4dd0e1); /* Slightly darker gradient for contrast */
+    color: white; /* White text for contrast */
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+button {
+    background: linear-gradient(135deg, #4dd0e1, #26c6da); /* Darker gradient for buttons */
+    border: none;
+    color: white; /* White text for readability */
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease; /* Smooth transition on hover */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #26c6da, #00acc1); /* Slightly darker on hover */
+}

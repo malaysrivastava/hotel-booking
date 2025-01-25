@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  # redis service
+  redis:
+    container_name: cont_redis
+    ports:
+      - 6379:6379
+    image: redis
+    volumes:
+      - bridges_datavol:/var/lib/redis                  # Wait for PostgreSQL to start before starting pgAdmin
+
+volumes:
+  bridges_datavol:
